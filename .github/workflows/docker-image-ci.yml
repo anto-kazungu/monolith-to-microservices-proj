@@ -19,8 +19,8 @@ jobs:
     - run: docker tag udagram-api-feed antokazungu/udagram-api-feed
     - run: docker tag udagram-api-user antokazungu/udagram-api-user
     - run: docker tag reverseproxy antokazungu/reverseproxy
-    - run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --pas
-    - run: push antokazungu/udagram-frontend
-    - run: push antokazungu/udagram-api-feed
-    - run: push antokazungu/udagram-api-user
-    - run: push antokazungu/reverseproxy
+    - run: echo "${{ secrets.DOCKERPW }}" | docker login -u "antokazungu" --password-stdin
+    - run: push antokazungu/udagram-frontend:latest
+    - run: push antokazungu/udagram-api-feed:latest
+    - run: push antokazungu/udagram-api-user:latest
+    - run: push antokazungu/reverseproxy:latest
