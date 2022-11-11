@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: antokazungu/udagram-frontend:v2
+        image: antokazungu/udagram-frontend:v4
         ports:
         - containerPort: 80
