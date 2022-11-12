@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: antokazungu/udagram-api-feed:latest
+        image: antokazungu/udagram-api-feed:v5
         ports:
         - containerPort: 8080
         envFrom:
